@@ -10,6 +10,13 @@
 
  On the root project path /weatherApp
 
+## Branches:
+```
+main -> for production
+dev -> for development
+```
+
+
 Run this:
 ```
 npm install
