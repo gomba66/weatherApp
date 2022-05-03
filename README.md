@@ -1,6 +1,7 @@
-# Weater App - Made with ReactJS and "Open Weather API"
+# Weater App
+### Made with ReactJS and "Open Weather API"
 
-# Technology Stack
+### Technology Stack
 
 - ReactJs v
 
@@ -13,5 +14,4 @@ Run this:
 ```
 npm install
 npm run start
-
 ```
