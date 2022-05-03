@@ -8,7 +8,7 @@
 
 ## How to run the project
 
- On the root project path $/WeatherApp
+ On the root project path /weatherApp
 
 Run this:
 ```
