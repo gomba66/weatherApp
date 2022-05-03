@@ -3,8 +3,10 @@
 
 ### Technology Stack
 
-- ReactJs v
-
+- React: 18.1.0
+- React DOM 18.1.0
+- Node v14.17.3
+- npm v6.14.13
 
 ## How to run the project
 
