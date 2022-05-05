@@ -42,7 +42,7 @@ const App = () => {
   const getData = async (location) => {
     axios
       .get(
-        `http://api.openweathermap.org/geo/1.0/reverse?lat=${location.latitude}&lon=${location.longitude}&limit=1&appid=cc12183198b65a2770b4c0ebd7f35101`
+        `https://api.openweathermap.org/geo/1.0/reverse?lat=${location.latitude}&lon=${location.longitude}&limit=1&appid=cc12183198b65a2770b4c0ebd7f35101`
       )
       .then(async (res) => {
         let city = res.data[0];

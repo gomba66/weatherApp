@@ -26,7 +26,6 @@ export default function InsetDividers(props) {
               <Avatar>
                 <img
                   src={`https://openweathermap.org/img/wn/${day.weather[0].icon}.png`}
-                  // https://openweathermap.org/img/wn/01d@2x.png
                   alt="weather icon"
                 />
               </Avatar>
