@@ -53,9 +53,6 @@ const App = () => {
           `https://api.openweathermap.org/data/2.5/weather?lat=${city.lat}&lon=${city.lon}&appid=cc12183198b65a2770b4c0ebd7f35101`
         );
 
-        console.log("forecast", forecast);
-        console.log("city", city);
-        console.log("current_weather", current_weather);
         setCurrentLocationData(current_weather);
         setCurrentLocation(
           `${city.local_names["de"]}, ${current_weather.name}, ${city.country}`
@@ -78,7 +75,7 @@ const App = () => {
         }
       );
     }
-  }, []);
+  }, [location.latitude, location.longitude]);
 
   useEffect(() => {
     if (location.latitude && location.longitude) {
@@ -90,7 +87,7 @@ const App = () => {
     if (day !== undefined) {
       setSelectedDay(Number(day));
     }
-  });
+  }, [day]);
 
   return (
     <div className="App">

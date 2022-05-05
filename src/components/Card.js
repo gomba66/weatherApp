@@ -7,7 +7,6 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import Skeleton from "@mui/material/Skeleton";
-import AcUnitIcon from "@mui/icons-material/AcUnit";
 import InsetDividers from "./ListDays";
 import Avatar from "@mui/material/Avatar";
 import { Link } from "react-router-dom";
@@ -80,13 +79,16 @@ export default function MediaCard(props) {
               <Skeleton width={40} height={40} />
             </div>
           )}{" "}
-          <Avatar>
-            <img
-              src={`https://openweathermap.org/img/wn/${props.currentLocationData.weather[0].icon}.png`}
-              // https://openweathermap.org/img/wn/01d@2x.png
-              alt="weather icon"
-            />
-          </Avatar>
+          {props.currentLocationData ? (
+            <Avatar>
+              <img
+                src={`https://openweathermap.org/img/wn/${props?.currentLocationData?.weather[0].icon}.png`}
+                alt="weather icon"
+              />
+            </Avatar>
+          ) : (
+            <Skeleton variant="circular" width={40} height={40} />
+          )}
         </h1>
         <Typography variant="body2" color="textSecondary" component="div">
           {props.currentLocationData ? (
@@ -111,7 +113,7 @@ export default function MediaCard(props) {
             return (
               <Link
                 key={index + 1}
-                to={`/day/${option}`}
+                to={`/weatherApp/day/${option}`}
                 style={{ textDecoration: "none", color: "black" }}
               >
                 <Item
