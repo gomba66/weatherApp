@@ -1,8 +1,14 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { render, screen } from "@testing-library/react";
+import { BrowserRouter } from "react-router-dom";
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+import App from "./App";
+
+// test('Render App and display a text that says Welcome to Weather App', () => {
+//   render(<App />,{wrapper: BrowserRouter});
+//   const linkElement = screen.getByText(/Welcome to Weather App/i);
+//   expect(linkElement).toBeInTheDocument();
+// });
+// test('',()=>{
+//   expect(true).toBe(true);
+// }
+//   )

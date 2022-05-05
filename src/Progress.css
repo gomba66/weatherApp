@@ -1,0 +1,7 @@
+.progress{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-top: 50px;
+    flex-direction: column;
+}
