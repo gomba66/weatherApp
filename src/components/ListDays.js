@@ -31,8 +31,8 @@ export default function InsetDividers(props) {
               </Avatar>
             </ListItemAvatar>
             <ListItemText
-              primary={`${new Date(day.dt_txt).toDateString()},
-                ${formatAMPM(new Date(day.dt_txt))}`}
+              primary={`${new Date(day.dt * 1000).toDateString()},
+                ${formatAMPM(new Date(day.dt * 1000))}`}
               secondary={day.weather[0].description}
             />
           </ListItem>
