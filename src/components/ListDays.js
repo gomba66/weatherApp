@@ -3,6 +3,7 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import ListItemAvatar from "@mui/material/ListItemAvatar";
+// import LinearTemperature from "./LinearTemperature";
 import Avatar from "@mui/material/Avatar";
 import Divider from "@mui/material/Divider";
 
@@ -35,6 +36,7 @@ export default function InsetDividers(props) {
                 ${formatAMPM(new Date(day.dt * 1000))}`}
               secondary={day.weather[0].description}
             />
+            {/* <LinearTemperature /> */}
           </ListItem>
           {index + 1 < days.length ? (
             <Divider variant="inset" component="li" />

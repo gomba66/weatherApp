@@ -71,7 +71,7 @@ const MainView = () => {
 
         setCurrentLocationData(current_weather);
         setCurrentLocation(
-          `${city.local_names["de"]}, ${forecast.city.name}, ${city.country}`
+          `${city.local_names["en"]}, ${forecast.city.name}, ${city.country}`
         );
         setDays(forecast.list);
       });

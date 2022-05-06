@@ -141,6 +141,15 @@ export default function MediaCard(props) {
             </div>
           )}
         </Typography>
+        <Typography variant="body2" color="textSecondary" component="div">
+          {props.currentLocationData ? (
+            `Humidity ${props.currentLocationData.main.humidity}%`
+          ) : (
+            <div style={{ display: "flex", justifyContent: "center" }}>
+              <Skeleton width={100} height={30} />
+            </div>
+          )}
+        </Typography>
       </CardContent>
       <CardActions>
         <div
