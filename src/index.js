@@ -9,7 +9,7 @@ import reportWebVitals from "./reportWebVitals";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/weatherApp">
       <Routes>
         <Route path="/weatherApp" element={<App />} />
         <Route path="weatherApp/day/:day" element={<App />} />
