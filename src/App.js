@@ -48,7 +48,7 @@ const App = () => {
       .then(async (res) => {
         let city = res.data[0];
         let { data: forecast } = await axios.get(
-          `https://api.openweathermap.org/data/2.5/forecast?lat=${city.lat}&lon=${city.lon}&appid=cc12183198b65a2770b4c0ebd7f35101`
+          `https://api.openweathermap.org/data/2.5/forecast?lat=${location.latitude}&lon=${location.longitude}&appid=cc12183198b65a2770b4c0ebd7f35101`
         );
         let { data: current_weather } = await axios.get(
           `https://api.openweathermap.org/data/2.5/weather?lat=${city.lat}&lon=${city.lon}&appid=cc12183198b65a2770b4c0ebd7f35101`
@@ -56,7 +56,7 @@ const App = () => {
 
         setCurrentLocationData(current_weather);
         setCurrentLocation(
-          `${city.local_names["de"]}, ${current_weather.name}, ${city.country}`
+          `${city.local_names["de"]}, ${forecast.city.name}, ${city.country}`
         );
         setDays(forecast.list);
       });
