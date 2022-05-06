@@ -27,7 +27,7 @@ export default function MediaCard(props) {
     "Friday",
     "Saturday",
   ];
-  const dateTest = new Date();
+  const current = new Date();
   const showImage = (currentWeather) => {
     switch (currentWeather) {
       case "Drizzle":
@@ -134,8 +134,8 @@ export default function MediaCard(props) {
                       : WEEK_DAYS[
                           new Date(
                             `${
-                              dateTest.getMonth() + 1
-                            }-${option}-${dateTest.getFullYear()}`
+                              current.getMonth() + 1
+                            }-${option}-${current.getFullYear()}`
                           ).getDay()
                         ]}
                   </span>

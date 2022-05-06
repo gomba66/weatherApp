@@ -18,6 +18,16 @@ const App = () => {
   const [weekDays, setWeekDays] = useState([]);
 
   useEffect(() => {
+    if (
+      weekDays.length &&
+      selectedDay === new Date().getDate() &&
+      !forecastSelectedDay.length
+    ) {
+      setSelectedDay(new Date(new Date().setDate(weekDays[0])).getDate());
+    }
+  }, [forecastSelectedDay, weekDays, selectedDay]);
+
+  useEffect(() => {
     if (days.length > 0) {
       let options = days.map((day) => {
         return new Date(day.dt_txt).getDate();
@@ -63,7 +73,7 @@ const App = () => {
   };
   useEffect(() => {
     let coords = window.navigator && window.navigator.geolocation;
-    if (coords && location.latitude === null && location.longitude === null) {
+    if (coords) {
       coords.getCurrentPosition(
         (position) => {
           setLocation({
@@ -76,7 +86,7 @@ const App = () => {
         }
       );
     }
-  }, [location.latitude, location.longitude]);
+  }, []);
 
   useEffect(() => {
     if (location.latitude && location.longitude) {
